@@ -1,0 +1,199 @@
+.mainContainer {
+  min-height: 100vh;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  padding-top: 1.5rem /* 24px */;
+  padding-bottom: 1.5rem /* 24px */;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* @apply min-h-screen w-full font-roboto bg-gray-200 py-6 flex flex-col justify-center items-center sm:py-12; */
+}
+@media (min-width: 640px) {
+  .sm\:py-12 {
+    padding-top: 3rem /* 48px */;
+    padding-bottom: 3rem /* 48px */;
+  }
+}
+
+/** Form */
+.form {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 2rem /* 32px */;
+  width: 91.666667%;
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  /* @apply bg-white p-8 w-11/12 md:w-1/2 lg:w-2/5 shadow-sm; */
+}
+@media (min-width: 768px) {
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:w-2\/5 {
+    width: 40%;
+  }
+}
+.form h2 {
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
+  font-weight: 700;
+  margin-bottom: 1rem /* 16px */;
+  /* @apply text-xl font-bold mb-4; */
+}
+
+/** Input group */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem /* 4px */;
+  margin-bottom: 2rem /* 32px */;
+  /* @apply flex flex-col gap-1 mb-8; */
+}
+.inputGroup div {
+  position: relative;
+  /* @apply relative; */
+}
+.inputGroup div span {
+  position: absolute;
+  right: 0px;
+  bottom: -1.25rem /* -20px */;
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+  font-size: 0.75rem /* 12px */;
+  line-height: 1rem /* 16px */;
+  /* @apply absolute right-0 -bottom-5 text-red-400 text-xs; */
+}
+.inputGroup h3 {
+  --tw-text-opacity: 1;
+  color: rgb(168 85 247 / var(--tw-text-opacity));
+  /* @apply text-purple-500; */
+}
+.inputGroup legend {
+  margin-top: 0.5rem /* 8px */;
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+  /* @apply mt-2 text-gray-700; */
+}
+.inputGroup input {
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+  padding: 0.5rem /* 8px */;
+  border-radius: 0.25rem /* 4px */;
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-placeholder-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+  /* @apply w-full bg-gray-100 border border-gray-300 p-2 rounded; */
+  /* @apply focus:border-blue-500 focus:bg-white placeholder-gray-400; */
+}
+.inputInvalid {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+  /* @apply border border-red-400 !important; */
+}
+
+/** navigation by steps */
+.navigationControls {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 1rem /* 16px */;
+  display: flex;
+  flex-direction: row-reverse;
+  /* @apply w-full justify-between mt-4 flex flex-row-reverse; */
+}
+.submitButton {
+  padding-top: 0.75rem /* 12px */;
+  padding-bottom: 0.75rem /* 12px */;
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(219 234 254 / var(--tw-text-opacity));
+  border-radius: 0.25rem /* 4px */;
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  font-weight: 700;
+  /* @apply py-3 px-5 bg-blue-700 text-blue-100 rounded text-sm font-bold; */
+}
+.submitButton:disabled,
+.nextButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.backButton,
+.nextButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.75rem /* 12px */;
+  line-height: 1rem /* 16px */;
+  font-weight: 700;
+  /* @apply flex flex-row items-center text-xs font-bold; */
+}
+.backButton {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+  border-radius: 0.25rem /* 4px */;
+  padding-top: 0.5rem /* 8px */;
+  padding-bottom: 0.5rem /* 8px */;
+  padding-left: 0.75rem /* 12px */;
+  padding-right: 0.75rem /* 12px */;
+  /* @apply bg-gray-100 text-gray-400 rounded py-2 px-3; */
+}
+.nextButton {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+  border-radius: 0.25rem /* 4px */;
+  padding-top: 0.5rem /* 8px */;
+  padding-bottom: 0.5rem /* 8px */;
+  padding-left: 0.75rem /* 12px */;
+  padding-right: 0.75rem /* 12px */;
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+  flex-direction: row-reverse;
+
+  /* @apply bg-blue-100 rounded py-2 px-3 text-blue-600 flex-row-reverse; */
+}
+
+/** navigation controls */
+.reference {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem /* 4px */;
+  padding-top: 1rem /* 16px */;
+  padding-bottom: 1rem /* 16px */;
+  /* @apply w-full flex items-center justify-center gap-1 py-4; */
+}
+.markerBlue,
+.markerGray {
+  border-radius: 9999px;
+  width: 0.5rem /* 8px */;
+  height: 0.5rem /* 8px */;
+}
+.markerBlue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+.markerGray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
